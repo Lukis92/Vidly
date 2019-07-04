@@ -196,10 +196,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907041111493_InitialModel.cs" />
+    <Compile Include="Migrations\201907041111493_InitialModel.Designer.cs">
+      <DependentUpon>201907041111493_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907041120184_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201907041120184_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201907041120184_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907041124161_AddMembershipType.cs" />
+    <Compile Include="Migrations\201907041124161_AddMembershipType.Designer.cs">
+      <DependentUpon>201907041124161_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907041126155_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201907041126155_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201907041126155_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -289,6 +307,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907041111493_InitialModel.resx">
+      <DependentUpon>201907041111493_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907041120184_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201907041120184_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907041124161_AddMembershipType.resx">
+      <DependentUpon>201907041124161_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907041126155_PopulateMembershipType.resx">
+      <DependentUpon>201907041126155_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
