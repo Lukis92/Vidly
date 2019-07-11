@@ -14,9 +14,23 @@ namespace Vidly.Models
         public int GenreID { get; set; }
 
         [Display(Name = "Release data")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReleasedDate { get; set; }
 
-        public DateTime AddedDate { get; set; }
+        private DateTime addedDate = DateTime.Now;
+
+        public DateTime AddedDate
+        {
+            get
+            {
+                return addedDate;
+            }
+            set
+            {
+                addedDate = value;
+            }
+        }
 
         [Display(Name = "Number in Stock")]
         [Range(1,20)]
