@@ -9,10 +9,12 @@ namespace Vidly.Models
 
         [Required]
         [StringLength(255)]
-        public string Name { get; set; }
+        public string Name { get; set; }      
         public Genre Genre { get; set; }
+        [Required(ErrorMessage = "Please select genre type.")]
         public int GenreID { get; set; }
 
+        [Required]
         [Display(Name = "Release data")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
